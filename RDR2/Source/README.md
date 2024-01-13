@@ -35,19 +35,18 @@ struct fSerVec2 {
         x(_x), y(_y) {}
 };
 
-//
 // Function used for converting World Coordinates to Screen Coordinates
-int WorldToScreenCoords(Vector3 worldcoord, float* screenX, float* screenY) {
+int WorldToScreenCoordinate(Vector3 worldcoord, float* screenX, float* screenY) {
     // Default return value indicating failure
     int wasSuccess = 0;
 
     // Call native function GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD()
     // Returns screen coordinates in [0, 1] for both width and height, with (0, 0) at the top-left of the screen
-    if (GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(worldcoord.x, worldcoord.y, worldcoord.z, &screenX, &screenY)) {
+    if (GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(worldcoord.x, worldcoord.y, worldcoord.z, screenX, screenY)) {
 
         // Normalize screen coordinates to the range [-1, 1]
-        screenX = (screenX - 0.5f) * 2.0f;
-        screenY = (screenY - 0.5f) * 2.0f;
+        *screenX = (*screenX - 0.5f) * 2.0f;
+        *screenY = (*screenY - 0.5f) * 2.0f;
 
         // Set the value of wasSuccess to indicate success
         wasSuccess = 1;
@@ -57,4 +56,5 @@ int WorldToScreenCoords(Vector3 worldcoord, float* screenX, float* screenY) {
     // whether the function failed or not is either 0 or 1
     return wasSuccess;
 }
+
 ```
