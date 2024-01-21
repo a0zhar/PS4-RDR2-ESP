@@ -24,8 +24,6 @@ bool WorldToScreenRel(Vector3 worldOrigin, float *screenX, float *screenY) {
     *screenX = x_result;//(x_result - 0.5f) * 2.0f;
     *screenY = y_result;//(y_result - 0.5f) * 2.0f;
 
-    // Return the value of <wasSuccess> which depending on 
-    // whether the function failed or not is either 0 or 1
     return wasSuccess;
 }
 
