@@ -37,14 +37,11 @@ bool WorldToScreenRel(Vector3 worldOrigin, float *screenX, float *screenY) {
 // Return value:
 // Upon success (true) will be returned, upon failure (false) will be returned
 bool get_bone_screen_coord(Player player, const char* boneName, fSerVec2* ScreenCoord) {
-    Vector3 world_bone_coord;
-    int boneIndex = -1;
-
     // Bone index
-    boneIndex = GET_ENTITY_BONE_INDEX_BY_NAME(player, boneName);
+    int boneIndex = GET_ENTITY_BONE_INDEX_BY_NAME(player, boneName);
 
     // Get the (X, Y, Z) Game World Coordinates for bone
-    world_bone_coord = GET_WORLD_POSITION_OF_ENTITY_BONE(player, boneIndex);
+    Vector3 world_bone_coord = GET_WORLD_POSITION_OF_ENTITY_BONE(player, boneIndex);
 
     // Now we use WorldToScreenRel to convert the world coordinates to screen
     // coordinates that can be used for the ESP feature
