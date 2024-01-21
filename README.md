@@ -1,6 +1,8 @@
 # Red Dead Redemption 2 (PS4) ESP Hack
 Welcome to the first public ESP hack for the PS4 version of Red Dead Redemption 2 (RDR2). Please note that this project is still a work in progress and is being actively developed and maintained by me, a0zhar.
 
+![Preview of Text Drawing (LQ)](/img/name_drawing.png)
+
 ## Current Features
 ### Core/Math
 - Implemented WorldToScreen functionality.
