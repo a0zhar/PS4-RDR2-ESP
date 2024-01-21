@@ -1,8 +1,13 @@
 #include "../include/screen.h"
 #include "../include/natives.h"
 
-
-// Function used for converting World Coordinates to Screen Coordinates
+//
+// This function is my WorldToScreen Implementation, that uses only Natives
+// to achive it's goal.. It will convert the world (x, y, z) coordinates to
+// screen (x, y) coordinates, that can be used for ex: drawing esp
+// ----
+// Return value:
+// Upon success (true) will be returned, upon failure (false) will be returned
 bool WorldToScreenRel(Vector3 worldOrigin, float *screenX, float *screenY) {
     // Default return value indicating failure
     bool wasSuccess = false;
@@ -23,20 +28,25 @@ bool WorldToScreenRel(Vector3 worldOrigin, float *screenX, float *screenY) {
     // whether the function failed or not is either 0 or 1
     return wasSuccess;
 }
-bool get_bone_screen_coord(Player player, const char *boneName, fSerVec2 *ScreenCoord) {
+
+//
+// Function gets the world coordinates of the requested bone and converts 
+// them to the respective screen coordinates using the world-to-screen 
+// implementation.
+// ----
+// Return value:
+// Upon success (true) will be returned, upon failure (false) will be returned
+bool get_bone_screen_coord(Player player, const char* boneName, fSerVec2* ScreenCoord) {
     Vector3 world_bone_coord;
     int boneIndex = -1;
 
     // Bone index
     boneIndex = GET_ENTITY_BONE_INDEX_BY_NAME(player, boneName);
 
-    // Get the (X, Y, Z) Game World Coordinates for bone   
+    // Get the (X, Y, Z) Game World Coordinates for bone
     world_bone_coord = GET_WORLD_POSITION_OF_ENTITY_BONE(player, boneIndex);
 
     // Now we use WorldToScreenRel to convert the world coordinates to screen
-    // coordinates that can be used for esp feature
-    if (!WorldToScreenRel(world_bone_coord, &ScreenCoord->x, &ScreenCoord->y))
-        return false;
-
-    return true;
+    // coordinates that can be used for the ESP feature
+    return WorldToScreenRel(world_bone_coord, &ScreenCoord->x, &ScreenCoord->y);
 }
