@@ -1,15 +1,10 @@
-# Red Dead Redemption 2 (PS4) ESP Hack
-Welcome to the first public ESP hack for the PS4 version of Red Dead Redemption 2 (RDR2). Please note that this project is still a work in progress and is being actively developed and maintained by me, a0zhar.
+# PS4 Red Dead Redemption 2 ESP(Visuals) Cheat
+Welcome to the first public open-source ESP cheat for the PS4 version of the RDR2 (Red Dead Redemption 2) game, coded and maintained by me! This cheat supports the RDR2 game patches (1.00, 1.13, 1.19, 1.24, and 1.29). Please note that this project is still a work in progress and is being actively developed and maintained by me, a0zhar.<br>
 
-![Preview of Text Drawing (LQ)](/img/name_drawing.png)
+Please join my Discord Server [Coming Soon!](https://discord.com/) which you can ask me questions, get help, see exclusive features and more!
 
-## Current Features
-### Core/Math
-- Implemented WorldToScreen functionality.
-- Developed a function to obtain bone coordinates of entities.
-### ESP/Visuals
-- Functional bounding box drawing (currently for the local player only).
-- Functional text drawing (currently for the local player only).
+## LQ Preview of Text Drawing on NPCs
+![Sorry for the Low Quality](/img/name_drawing.png)
 
 ## IMPORTANT INFORMATION!
 To use this ESP hack, ensure that you have:
