@@ -3,8 +3,9 @@ Welcome to the first public open-source ESP cheat for the PS4 version of the RDR
 
 Please join my Discord Server [HERE!](https://discord.gg/sh7gnjrURq) which you can ask me questions, get help, see exclusive features and more!
 
-## LQ Preview of Text Drawing on NPCs
-![Sorry for the Low Quality](/img/name_drawing.png)
+## High Quality Skeleton (Bone number) and Low Quality text ESP-Drawing
+<img src="/img/skeleton_drawing.jpg" width="200" height="200" /><img src="/img/name_drawing.png" width="200" height="200" />
+
 
 ## IMPORTANT INFORMATION!
 To use this ESP hack, ensure that you have:
