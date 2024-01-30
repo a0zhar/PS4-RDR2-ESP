@@ -114,19 +114,29 @@ struct fSerBox {
 };
 
 
-struct SerColor {
-    int r, g, b, a;
 
-    // Constructor's
-    constexpr SerColor(): r(0), g(0), b(0), a(255) {}
-    constexpr SerColor(int _r, int _g, int _b, int _a = 255) :
+//
+// Used for RGB/RGBA colors, originally inspired by the ImColor
+// created by ImGui...
+struct SerCol {
+    int r; // Red
+    int g; // Green
+    int b; // Blue
+    int a; // Alpha (Transparency)
+
+    // Using Initialization list in the constructors   
+    constexpr SerCol(): r(0), g(0), b(0), a(255) {}
+    constexpr SerCol(int _r, int _g, int _b, int _a = 255) :
         r(_r), g(_g), b(_b), a(_a) {}
 
-    static SerColor black(int _a = 255) { return { 0, 0, 0, _a }; }
-    static SerColor white(int _a = 255) { return { 255, 255, 255, _a }; }
-    static SerColor red(int _a = 255) { return { 255, 0, 0, _a }; }
-    static SerColor green(int _a = 255) { return { 0, 255, 0, _a }; }
-    static SerColor blue(int _a = 255) { return { 0, 0, 255, _a }; }
+    // ------------------------------------
+    // Commonly used RGB/RGBA Colors predefined
+
+    static SerCol black(int _a = 255) { return { 0, 0, 0, _a }; }
+    static SerCol white(int _a = 255) { return { 255, 255, 255, _a }; }
+    static SerCol red(int _a = 255) { return { 255, 0, 0, _a }; }
+    static SerCol green(int _a = 255) { return { 0, 255, 0, _a }; }
+    static SerCol blue(int _a = 255) { return { 0, 0, 255, _a }; }
 };
 
 #endif
