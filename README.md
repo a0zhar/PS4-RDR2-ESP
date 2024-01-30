@@ -1,7 +1,7 @@
 # PS4 Red Dead Redemption 2 ESP(Visuals) Cheat
 Welcome to the first public open-source ESP cheat for the PS4 version of the RDR2 (Red Dead Redemption 2) game, coded and maintained by me! This cheat supports the RDR2 game patches (1.00, 1.13, 1.19, 1.24, and 1.29). Please note that this project is still a work in progress and is being actively developed and maintained by me, a0zhar.<br>
 
-Please join my Discord Server [Coming Soon!](https://discord.com/) which you can ask me questions, get help, see exclusive features and more!
+Please join my Discord Server [HERE!](https://discord.gg/sh7gnjrURq) which you can ask me questions, get help, see exclusive features and more!
 
 ## LQ Preview of Text Drawing on NPCs
 ![Sorry for the Low Quality](/img/name_drawing.png)
